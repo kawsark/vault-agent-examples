@@ -1,3 +1,7 @@
+## Installing Vault using vault-helm
+Note the following steps will perform a non-HA Vault install. For a HA Vault install, please use consul-helm first to install a Consul cluster.
+
+```
 # Ensure that the correct context is selected
 kubectl config get-contexts
 
@@ -31,3 +35,4 @@ helm install --name vault-k8s -f vaultk8s.values.yaml https://github.com/hashico
 
 # To update later, use the command as below
 helm upgrade vault-dockerk8s -f dockerk8s.values.yaml https://github.com/hashicorp/vault-helm.git
+```
